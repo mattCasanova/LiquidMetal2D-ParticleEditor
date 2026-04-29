@@ -5,20 +5,20 @@ Scope: pure refactor (Part A) + introduce settings-via-BlobStore plumbing (Part 
 ## Checklist
 
 ### Part A — Constants and strings extraction (pure refactor, no behavior change)
-- [ ] Create `LiquidMetal2D-ParticleEditor/Theme/UIConstants.swift`
-- [ ] Create `LiquidMetal2D-ParticleEditor/Strings/EditorStrings.swift`
-- [ ] Update `Views/ContentView.swift` to read every layout/animation/icon literal from `UIConstants`
-- [ ] Update `Views/ControlPanel.swift` similarly + emit label string via `EditorStrings`
-- [ ] Verify clean build, run on iPad simulator — visual parity with current state
-- [ ] Commit: `refactor: extract UI constants and strings`
+- [x] Create `LiquidMetal2D-ParticleEditor/Theme/UIConstants.swift`
+- [x] Create `LiquidMetal2D-ParticleEditor/Strings/EditorStrings.swift`
+- [x] Update `Views/ContentView.swift` to read every layout/animation/icon literal from `UIConstants`
+- [x] Update `Views/ControlPanel.swift` similarly + emit label string via `EditorStrings`
+- [x] Verify clean build, run on iPad simulator — visual parity with current state
+- [x] Commit: `refactor: extract UI constants and strings` (`943aabe`)
 
 ### Part B — Settings model + BlobStore persistence
-- [ ] Create `Models/Settings.swift` — `Codable` struct holding the slider ranges, with default values
-- [ ] Update `Models/EditorState.swift` to expose `var settings: Settings`
-- [ ] Update `Scene/ParticleEditorVC.swift` to construct a `CodableBlobStore<Settings>` over a `FileBlobStore(subdirectory: "settings")`, then load existing settings or write the in-code defaults on first launch
-- [ ] Update `Views/ControlPanel.swift` so the Emission slider's range comes from `state.settings.emissionRange` (not hardcoded `10...400`)
-- [ ] Verify clean build, then verify persistence end-to-end (see Verification below)
-- [ ] Commit: `feat: persist editor settings via BlobStore`
+- [x] Create `Models/Settings.swift` — `Codable` struct holding the slider ranges, with default values
+- [x] Update `Models/EditorState.swift` to expose `var settings: Settings`
+- [x] Update `Scene/ParticleEditorVC.swift` to construct a `CodableBlobStore<Settings>` over a `FileBlobStore(subdirectory: "settings")`, then load existing settings or write the in-code defaults on first launch
+- [x] Update `Views/ControlPanel.swift` so the Emission slider's range comes from `state.settings.emissionRange` (not hardcoded `10...400`)
+- [x] Verify clean build, then verify persistence end-to-end (see Verification below)
+- [x] Commit: `feat: persist editor settings via BlobStore` (`07c5ab5`)
 
 ## Context
 
