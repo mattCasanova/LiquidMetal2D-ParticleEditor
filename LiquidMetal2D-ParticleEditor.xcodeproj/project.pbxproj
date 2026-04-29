@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F5C197072FA1B57600E32C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C196F12FA1B57500E32C0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C196F82FA1B57500E32C0C;
+			remoteInfo = "LiquidMetal2D-ParticleEditor";
+		};
+		F5C197112FA1B57600E32C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C196F12FA1B57500E32C0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C196F82FA1B57500E32C0C;
+			remoteInfo = "LiquidMetal2D-ParticleEditor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5C196F92FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LiquidMetal2D-ParticleEditor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C197062FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LiquidMetal2D-ParticleEditorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C197102FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LiquidMetal2D-ParticleEditorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F5C196FB2FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "LiquidMetal2D-ParticleEditor";
+			sourceTree = "<group>";
+		};
+		F5C197092FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "LiquidMetal2D-ParticleEditorTests";
+			sourceTree = "<group>";
+		};
+		F5C197132FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "LiquidMetal2D-ParticleEditorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5C196F62FA1B57500E32C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C197032FA1B57600E32C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C1970D2FA1B57600E32C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5C196F02FA1B57500E32C0C = {
+			isa = PBXGroup;
+			children = (
+				F5C196FB2FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */,
+				F5C197092FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests */,
+				F5C197132FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests */,
+				F5C196FA2FA1B57500E32C0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5C196FA2FA1B57500E32C0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5C196F92FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor.app */,
+				F5C197062FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests.xctest */,
+				F5C197102FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5C196F82FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C1971A2FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditor" */;
+			buildPhases = (
+				F5C196F52FA1B57500E32C0C /* Sources */,
+				F5C196F62FA1B57500E32C0C /* Frameworks */,
+				F5C196F72FA1B57500E32C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F5C196FB2FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */,
+			);
+			name = "LiquidMetal2D-ParticleEditor";
+			packageProductDependencies = (
+			);
+			productName = "LiquidMetal2D-ParticleEditor";
+			productReference = F5C196F92FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5C197052FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C1971D2FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditorTests" */;
+			buildPhases = (
+				F5C197022FA1B57600E32C0C /* Sources */,
+				F5C197032FA1B57600E32C0C /* Frameworks */,
+				F5C197042FA1B57600E32C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C197082FA1B57600E32C0C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F5C197092FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests */,
+			);
+			name = "LiquidMetal2D-ParticleEditorTests";
+			packageProductDependencies = (
+			);
+			productName = "LiquidMetal2D-ParticleEditorTests";
+			productReference = F5C197062FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5C1970F2FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C197202FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditorUITests" */;
+			buildPhases = (
+				F5C1970C2FA1B57600E32C0C /* Sources */,
+				F5C1970D2FA1B57600E32C0C /* Frameworks */,
+				F5C1970E2FA1B57600E32C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C197122FA1B57600E32C0C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F5C197132FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests */,
+			);
+			name = "LiquidMetal2D-ParticleEditorUITests";
+			packageProductDependencies = (
+			);
+			productName = "LiquidMetal2D-ParticleEditorUITests";
+			productReference = F5C197102FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5C196F12FA1B57500E32C0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					F5C196F82FA1B57500E32C0C = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					F5C197052FA1B57600E32C0C = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = F5C196F82FA1B57500E32C0C;
+					};
+					F5C1970F2FA1B57600E32C0C = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = F5C196F82FA1B57500E32C0C;
+					};
+				};
+			};
+			buildConfigurationList = F5C196F42FA1B57500E32C0C /* Build configuration list for PBXProject "LiquidMetal2D-ParticleEditor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5C196F02FA1B57500E32C0C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F5C196FA2FA1B57500E32C0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5C196F82FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */,
+				F5C197052FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorTests */,
+				F5C1970F2FA1B57600E32C0C /* LiquidMetal2D-ParticleEditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5C196F72FA1B57500E32C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C197042FA1B57600E32C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C1970E2FA1B57600E32C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5C196F52FA1B57500E32C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C197022FA1B57600E32C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C1970C2FA1B57600E32C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5C197082FA1B57600E32C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C196F82FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */;
+			targetProxy = F5C197072FA1B57600E32C0C /* PBXContainerItemProxy */;
+		};
+		F5C197122FA1B57600E32C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C196F82FA1B57500E32C0C /* LiquidMetal2D-ParticleEditor */;
+			targetProxy = F5C197112FA1B57600E32C0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F5C197182FA1B57600E32C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5C197192FA1B57600E32C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5C1971B2FA1B57600E32C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5C1971C2FA1B57600E32C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5C1971E2FA1B57600E32C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiquidMetal2D-ParticleEditor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiquidMetal2D-ParticleEditor";
+			};
+			name = Debug;
+		};
+		F5C1971F2FA1B57600E32C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiquidMetal2D-ParticleEditor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiquidMetal2D-ParticleEditor";
+			};
+			name = Release;
+		};
+		F5C197212FA1B57600E32C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LiquidMetal2D-ParticleEditor";
+			};
+			name = Debug;
+		};
+		F5C197222FA1B57600E32C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattcasanova.LiquidMetal2D-ParticleEditorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LiquidMetal2D-ParticleEditor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5C196F42FA1B57500E32C0C /* Build configuration list for PBXProject "LiquidMetal2D-ParticleEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C197182FA1B57600E32C0C /* Debug */,
+				F5C197192FA1B57600E32C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C1971A2FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C1971B2FA1B57600E32C0C /* Debug */,
+				F5C1971C2FA1B57600E32C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C1971D2FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C1971E2FA1B57600E32C0C /* Debug */,
+				F5C1971F2FA1B57600E32C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C197202FA1B57600E32C0C /* Build configuration list for PBXNativeTarget "LiquidMetal2D-ParticleEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C197212FA1B57600E32C0C /* Debug */,
+				F5C197222FA1B57600E32C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5C196F12FA1B57500E32C0C /* Project object */;
+}
