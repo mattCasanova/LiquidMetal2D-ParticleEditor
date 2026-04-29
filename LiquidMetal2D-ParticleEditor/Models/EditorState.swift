@@ -2,19 +2,20 @@
 //  EditorState.swift
 //  LiquidMetal2D-ParticleEditor
 //
-//  @Observable model holding the live emitter's tunable parameters.
-//  Owned by ContentView, mutated by SwiftUI controls, read each frame
-//  by the editor scene through EditorServices.
+//  @Observable model the SwiftUI views bind to and the engine scene
+//  reads each frame.
+//
+//  Two distinct concerns live here:
+//    - `settings`: editor preferences (slider bounds), persisted in
+//      app-controlled `editor.json` via BlobStore.
+//    - `effect`:   the particle effect being designed, persisted to
+//      user-chosen `.particleeffect` files via DocumentIO.
 //
 
 import Foundation
 
 @Observable
 final class EditorState {
-    var emissionRate: Float = 140
-
-    /// Persisted settings (slider ranges, etc.). Initialized to in-code
-    /// defaults; replaced with the BlobStore-loaded version during
-    /// `ParticleEditorVC.viewDidLoad()`.
     var settings: Settings = Settings()
+    var effect: ParticleEffect = ParticleEffect()
 }

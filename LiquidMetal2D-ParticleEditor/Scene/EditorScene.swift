@@ -3,8 +3,11 @@
 //  LiquidMetal2D-ParticleEditor
 //
 //  The single scene the editor runs. Owns the live emitter, registers the
-//  particle shader, and applies EditorState values to the emitter each
-//  frame so SwiftUI slider drags feed straight into the simulation.
+//  particle shader, and applies EditorState.effect values to the live
+//  emitter each frame so SwiftUI slider drags feed straight into the
+//  simulation. `rebuild()` tears down and reconstructs the shader and
+//  emitter — used both at scene init and after a Load operation, when
+//  the loaded effect may need different shader/emitter buffer sizes.
 //
 
 import LiquidMetal2D
@@ -13,13 +16,8 @@ final class EditorScene: DefaultScene {
     override class var sceneType: any SceneType { EditorSceneType.editor }
 
     private let distance: Float = 40
-    private var particleShader: ParticleShader!
-    private var emitterObj: GameObj!
-
-    private let fireStartColor = Vec4(1.0, 0.55, 0.15, 0.7)
-    private let fireStartVar   = Vec4(1.0, 0.85, 0.20, 0.7)
-    private let fireEndColor   = Vec4(0.9, 0.10, 0.00, 0.0)
-    private let fireEndVar     = Vec4(0.5, 0.00, 0.00, 0.0)
+    private var particleShader: ParticleShader?
+    private var emitterObj: GameObj?
 
     override func initialize(services: SceneServices) {
         super.initialize(services: services)
@@ -28,67 +26,110 @@ final class EditorScene: DefaultScene {
         renderer.setDefaultPerspective()
         renderer.setClearColor(color: Vec3(0.02, 0.02, 0.05))
 
+        rebuild()
+    }
+
+    /// Tears down the existing shader and emitter (if any) and rebuilds
+    /// them from `state.effect`. Called once at scene init and again
+    /// after Load to pick up potentially different shader maxObjects /
+    /// emitter maxParticles values from the loaded effect.
+    func rebuild() {
+        guard let editor = services as? EditorServices else { return }
         guard let defaultRenderer = renderer as? DefaultRenderer else {
             fatalError("EditorScene requires DefaultRenderer")
         }
-        particleShader = ParticleShader(
-            renderCore: defaultRenderer.renderCore,
-            maxObjects: 500)
-        renderer.register(shader: particleShader)
 
-        createEmitter()
+        // Tear down any existing shader/emitter
+        if let shader = particleShader {
+            renderer.unregister(shader: shader)
+        }
+        objects.removeAll()
+
+        let effect = editor.state.effect
+
+        let shader = ParticleShader(
+            renderCore: defaultRenderer.renderCore,
+            maxObjects: effect.shader.maxObjects)
+        renderer.register(shader: shader)
+        particleShader = shader
+
+        // V1 builds only the first emitter — multi-emitter UI is later.
+        guard let cfg = effect.emitters.first else { return }
+        emitterObj = makeEmitterObject(from: cfg)
+        if let obj = emitterObj { objects.append(obj) }
     }
 
     override func update(dt: Float) {
-        let emitter = emitterObj.get(ParticleEmitterComponent.self)
-
         if let touch = input.getWorldTouch(forZ: 0) {
-            emitterObj.position.set(touch.x, touch.y)
+            emitterObj?.position.set(touch.x, touch.y)
         }
 
-        if let editor = services as? EditorServices, let emitter {
-            emitter.emissionRate = editor.state.emissionRate
+        if let editor = services as? EditorServices,
+           let cfg = editor.state.effect.emitters.first,
+           let emitter = emitterObj?.get(ParticleEmitterComponent.self) {
+            // Apply current effect values to the live emitter every frame.
+            // Slider drags propagate immediately; loaded effects show up
+            // on the next frame after rebuild() finishes.
+            emitter.emissionRate = cfg.emissionRate
+            emitter.localOffset = cfg.localOffset
+            emitter.shape = cfg.shape
+            emitter.lifetimeRange = cfg.lifetimeRange
+            emitter.speedRange = cfg.speedRange
+            emitter.angleRange = cfg.angleRange
+            emitter.scaleRange = cfg.scaleRange
+            emitter.angularVelocityRange = cfg.angularVelocityRange
+            emitter.startColor = cfg.startColor
+            emitter.startColorVariation = cfg.startColorVariation
+            emitter.endColor = cfg.endColor
+            emitter.endColorVariation = cfg.endColorVariation
+            emitter.correlatedColorVariation = cfg.correlatedColorVariation
+            emitter.gravity = cfg.gravity
         }
 
-        emitter?.update(dt: dt)
+        emitterObj?.get(ParticleEmitterComponent.self)?.update(dt: dt)
     }
 
     override func draw() {
         guard renderer.beginPass() else { return }
         renderer.usePerspective()
-        renderer.useShader(particleShader)
+        if let shader = particleShader {
+            renderer.useShader(shader)
+        }
         renderer.submit(objects: objects)
         renderer.endPass()
     }
 
     override func shutdown() {
         super.shutdown()
-        renderer.unregister(shader: particleShader)
+        if let shader = particleShader {
+            renderer.unregister(shader: shader)
+            particleShader = nil
+        }
     }
 
-    private func createEmitter() {
+    private func makeEmitterObject(from cfg: EmitterConfig) -> GameObj {
         let obj = GameObj()
         obj.position.set(0, -6)
 
         obj.add(ParticleEmitterComponent(
             parent: obj,
-            maxParticles: 400,
+            maxParticles: cfg.maxParticles,
             textureID: renderer.defaultParticleTextureId,
-            emissionRate: 140,
-            localOffset: Vec2(),
-            lifetimeRange: 0.8...1.6,
-            speedRange: 6...14,
-            angleRange: (.pi / 2 - 0.25)...(.pi / 2 + 0.25),
-            scaleRange: 4...8,
-            angularVelocityRange: -1...1,
-            startColor: fireStartColor,
-            startColorVariation: fireStartVar,
-            endColor: fireEndColor,
-            endColorVariation: fireEndVar,
-            correlatedColorVariation: true,
-            gravity: Vec2(0, 1)))
+            emissionRate: cfg.emissionRate,
+            localOffset: cfg.localOffset,
+            shape: cfg.shape,
+            lifetimeRange: cfg.lifetimeRange,
+            speedRange: cfg.speedRange,
+            angleRange: cfg.angleRange,
+            scaleRange: cfg.scaleRange,
+            angularVelocityRange: cfg.angularVelocityRange,
+            startColor: cfg.startColor,
+            startColorVariation: cfg.startColorVariation,
+            endColor: cfg.endColor,
+            endColorVariation: cfg.endColorVariation,
+            correlatedColorVariation: cfg.correlatedColorVariation,
+            gravity: cfg.gravity))
 
-        objects.append(obj)
-        emitterObj = obj
+        return obj
     }
 }

@@ -19,9 +19,11 @@ struct ControlPanel: View {
     var body: some View {
         VStack(alignment: .leading, spacing: UIConstants.sliderRowSpacing) {
             VStack(alignment: .leading, spacing: UIConstants.sliderLabelSpacing) {
-                Text(EditorStrings.emission(state.emissionRate))
+                Text(EditorStrings.emission(state.effect.emitters[0].emissionRate))
                     .font(.system(.body, design: .monospaced))
-                Slider(value: $state.emissionRate, in: state.settings.emissionRange)
+                Slider(
+                    value: $state.effect.emitters[0].emissionRate,
+                    in: state.settings.emissionRange)
             }
 
             Spacer()
