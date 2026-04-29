@@ -24,29 +24,37 @@ struct ContentView: View {
 
             if isPanelOpen {
                 ControlPanel(state: state)
-                    .frame(width: 320)
+                    .frame(width: UIConstants.panelWidth)
                     .frame(maxHeight: .infinity)
                     .transition(.move(edge: .trailing))
                     .ignoresSafeArea()
             }
 
             Button {
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                withAnimation(
+                    .spring(
+                        response: UIConstants.panelAnimationResponse,
+                        dampingFraction: UIConstants.panelAnimationDamping)
+                ) {
                     isPanelOpen.toggle()
                 }
             } label: {
                 Image(systemName: isPanelOpen
                     ? "sidebar.right"
                     : "sidebar.left")
-                    .font(.system(size: 18, weight: .semibold))
+                    .font(.system(
+                        size: UIConstants.toggleIconSize,
+                        weight: .semibold))
                     .foregroundStyle(.white)
-                    .frame(width: 38, height: 38)
-                    .background(.black.opacity(0.55))
+                    .frame(
+                        width: UIConstants.toggleButtonSize,
+                        height: UIConstants.toggleButtonSize)
+                    .background(.black.opacity(UIConstants.toggleButtonOpacity))
                     .background(.ultraThinMaterial, in: .circle)
                     .clipShape(.circle)
             }
-            .padding(.top, 16)
-            .padding(.trailing, 16)
+            .padding(.top, UIConstants.toggleEdgePadding)
+            .padding(.trailing, UIConstants.toggleEdgePadding)
         }
     }
 }

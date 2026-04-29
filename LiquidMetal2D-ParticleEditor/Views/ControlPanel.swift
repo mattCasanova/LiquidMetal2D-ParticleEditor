@@ -17,18 +17,18 @@ struct ControlPanel: View {
     @Bindable var state: EditorState
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Emission: \(Int(state.emissionRate))/s")
+        VStack(alignment: .leading, spacing: UIConstants.sliderRowSpacing) {
+            VStack(alignment: .leading, spacing: UIConstants.sliderLabelSpacing) {
+                Text(EditorStrings.emission(state.emissionRate))
                     .font(.system(.body, design: .monospaced))
                 Slider(value: $state.emissionRate, in: 10...400)
             }
 
             Spacer()
         }
-        .padding(.top, 72)             // leave space for the floating toggle button
-        .padding(.horizontal, 16)
-        .padding(.bottom, 16)
+        .padding(.top, UIConstants.panelTopInset)
+        .padding(.horizontal, UIConstants.panelEdgePadding)
+        .padding(.bottom, UIConstants.panelEdgePadding)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.regularMaterial)
         .environment(\.colorScheme, .dark)
