@@ -21,7 +21,7 @@ struct ControlPanel: View {
             VStack(alignment: .leading, spacing: UIConstants.sliderLabelSpacing) {
                 Text(EditorStrings.emission(state.emissionRate))
                     .font(.system(.body, design: .monospaced))
-                Slider(value: $state.emissionRate, in: 10...400)
+                Slider(value: $state.emissionRate, in: state.settings.emissionRange)
             }
 
             Spacer()
