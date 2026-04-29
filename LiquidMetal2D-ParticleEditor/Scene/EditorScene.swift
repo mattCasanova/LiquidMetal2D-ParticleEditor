@@ -1,57 +1,21 @@
 //
-//  ParticleEditorVC.swift
+//  EditorScene.swift
 //  LiquidMetal2D-ParticleEditor
 //
-//  V0: Hosts a LiquidMetal2D engine displaying the campfire emitter from
-//  the demo's ParticleDemo. No SwiftUI controls yet — this validates the
-//  LiquidView bridge and the engine integration before any UI sits on top.
+//  The single scene the editor runs. Owns the live emitter, registers the
+//  particle shader, and applies EditorState values to the emitter each
+//  frame so SwiftUI slider drags feed straight into the simulation.
 //
 
-import UIKit
 import LiquidMetal2D
 
-// MARK: - Scene types
-
-private enum EditorSceneType: SceneType {
-    case editor
-}
-
-// MARK: - View controller
-
-/// Owns the engine and serves as the presenting VC for ``DocumentIO``.
-/// Hosted inside SwiftUI via ``LiquidView``.
-final class ParticleEditorVC: LiquidViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let renderer = DefaultRenderer(parentView: view, maxObjects: 100)
-        let documents = DocumentIO(presentingVC: self)
-
-        let sceneFactory = SceneFactory()
-        sceneFactory.addScene(EditorScene.self)
-
-        gameEngine = DefaultEngine(
-            renderer: renderer,
-            documents: documents,
-            initialSceneType: EditorSceneType.editor,
-            sceneFactory: sceneFactory)
-
-        gameEngine.run()
-    }
-}
-
-// MARK: - Scene
-
-private final class EditorScene: DefaultScene {
+final class EditorScene: DefaultScene {
     override class var sceneType: any SceneType { EditorSceneType.editor }
 
     private let distance: Float = 40
     private var particleShader: ParticleShader!
     private var emitterObj: GameObj!
 
-    // Campfire palette — copied from ParticleDemo so we know what good
-    // looks like.
     private let fireStartColor = Vec4(1.0, 0.55, 0.15, 0.7)
     private let fireStartVar   = Vec4(1.0, 0.85, 0.20, 0.7)
     private let fireEndColor   = Vec4(0.9, 0.10, 0.00, 0.0)
@@ -76,10 +40,17 @@ private final class EditorScene: DefaultScene {
     }
 
     override func update(dt: Float) {
+        let emitter = emitterObj.get(ParticleEmitterComponent.self)
+
         if let touch = input.getWorldTouch(forZ: 0) {
             emitterObj.position.set(touch.x, touch.y)
         }
-        emitterObj.get(ParticleEmitterComponent.self)?.update(dt: dt)
+
+        if let editor = services as? EditorServices, let emitter {
+            emitter.emissionRate = editor.state.emissionRate
+        }
+
+        emitter?.update(dt: dt)
     }
 
     override func draw() {
