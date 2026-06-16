@@ -60,3 +60,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Build dirs (safety net) + macOS
+build/
+DerivedData/
+.DS_Store
+*.icloud
